@@ -88,29 +88,34 @@ namespace HackHelp
 
                 /* Фото */
                 string file_path = photodir_label.Text;
-                string new_file_path = Path.GetFileName(file_path);
-
-                if (!Directory.Exists(Program.my_directory + Data.folderPath + @"\images\"))
+                string end_path = "";
+                if (!string.IsNullOrEmpty(file_path))
                 {
-                    Directory.CreateDirectory(Program.my_directory + Data.folderPath + @"\images\");
-                }
+                    string new_file_path = Path.GetFileName(file_path);
 
-                while (File.Exists(Program.my_directory + Data.folderPath + @"\images\" + new_file_path))
-                {
-                    // уже существует
-                    Random r = new Random();
-                    int rand = r.Next(int.MaxValue);
-                    new_file_path = rand.ToString() + new_file_path;
-                }
+                    if (!Directory.Exists(Program.my_directory + Data.folderPath + @"\images\"))
+                    {
+                        Directory.CreateDirectory(Program.my_directory + Data.folderPath + @"\images\");
+                    }
 
-                File.Copy(file_path, Program.my_directory + Data.folderPath + @"\images\" + new_file_path);
+                    while (File.Exists(Program.my_directory + Data.folderPath + @"\images\" + new_file_path))
+                    {
+                        // уже существует
+                        Random r = new Random();
+                        int rand = r.Next(int.MaxValue);
+                        new_file_path = rand.ToString() + new_file_path;
+                    }
+
+                    File.Copy(file_path, Program.my_directory + Data.folderPath + @"\images\" + new_file_path);
+                    end_path = Data.folderPath + @"\images\" + new_file_path;
+                }
 
                 /* Фото */
 
                 InfoContent cont = new InfoContent()
                 {
                     text = text_textbox.Text,
-                    photo_path = Data.folderPath + @"\images\" + new_file_path,
+                    photo_path = end_path,
                     line = line_check.Checked
                 };
 

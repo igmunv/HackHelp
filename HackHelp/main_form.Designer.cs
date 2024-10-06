@@ -74,7 +74,7 @@
             // 
             // add_button
             // 
-            this.add_button.BackColor = System.Drawing.Color.LightGray;
+            this.add_button.BackColor = System.Drawing.Color.YellowGreen;
             this.add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.add_button.FlatAppearance.BorderSize = 0;
             this.add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -145,14 +145,14 @@
             // открытьToolStripMenuItem
             // 
             this.открытьToolStripMenuItem.Name = "открытьToolStripMenuItem";
-            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.открытьToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.открытьToolStripMenuItem.Text = "Открыть";
             // 
             // CloseApp_contex_butt
             // 
             this.CloseApp_contex_butt.BackColor = System.Drawing.SystemColors.Control;
             this.CloseApp_contex_butt.Name = "CloseApp_contex_butt";
-            this.CloseApp_contex_butt.Size = new System.Drawing.Size(180, 22);
+            this.CloseApp_contex_butt.Size = new System.Drawing.Size(121, 22);
             this.CloseApp_contex_butt.Text = "Выйти";
             this.CloseApp_contex_butt.Click += new System.EventHandler(this.CloseApp_ToolStripMenuItem_Click);
             // 
@@ -162,12 +162,12 @@
             this.копироватьToolStripMenuItem});
             this.contex_menu_text.Name = "contex_menu_text";
             this.contex_menu_text.ShowImageMargin = false;
-            this.contex_menu_text.Size = new System.Drawing.Size(156, 48);
+            this.contex_menu_text.Size = new System.Drawing.Size(115, 26);
             // 
             // копироватьToolStripMenuItem
             // 
             this.копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
-            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.копироватьToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.копироватьToolStripMenuItem.Text = "Копировать";
             this.копироватьToolStripMenuItem.Click += new System.EventHandler(this.CopyText_ToolStripMenuItem_Click);
             // 
